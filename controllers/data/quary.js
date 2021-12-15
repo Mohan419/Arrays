@@ -3,10 +3,12 @@ var   notifications=require ('../../model/app/notification');
 var quarydata = {
 arrayinsertquarypass:(params)=>{
     const dataquary = new insertdataquary({
+        
         fname:params.fname,
         lname:params.lname,
         age:params.age,
         gmail:params.gmail,
+        password:params.password,
         phonenumber:params.phonenumber,
         address:params.address,
     })

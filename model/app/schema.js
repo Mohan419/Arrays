@@ -19,12 +19,17 @@ var arrayInfo = new schema({
         required: true,
         unique: true
     },
+    password:{
+        type: String,
+        required: true,
+        
+    },
     phonenumber: {
         type: Number,
         required: true
     },
     address: {
-        type: Array,
+        type:String,
         required: true
     }
 })

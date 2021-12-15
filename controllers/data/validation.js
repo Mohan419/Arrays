@@ -2,13 +2,15 @@ const { array } = require('@hapi/joi');
 var joi = require ('@hapi/joi');
 var validation = {
 arrayvalidationpass:(params)=>{
+    
     const validdata = joi.object({
         fname:joi.string().required(),
         lname:joi.string().required(),
         age:joi.number().required(),
         gmail:joi.string().required(),
+        password:joi.string().min(6).max(10).required(),
         phonenumber:joi.number().required(),
-        address:joi.array().required(),
+        address:joi.string().required(),
     })
     return validdata.validate(params);
 },
